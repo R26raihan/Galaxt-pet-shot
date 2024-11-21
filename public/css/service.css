@@ -1,0 +1,206 @@
+/* Bagian Layanan */
+.services-description {
+    padding: 80px 0;
+    background-color: #f0f8ff; /* Biru muda pastel */
+}
+
+/* Grid untuk Layanan */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Menyesuaikan dengan ukuran layar */
+    gap: 40px;
+}
+
+/* Card Layanan */
+.service-item {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efek hover pada item layanan */
+.service-item:hover {
+    transform: translateY(-12px); /* Efek angkat */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    border: 3px solid #3f80ff;
+}
+
+/* Gambar Layanan */
+.service-img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+}
+
+/* Efek hover pada gambar */
+.service-img:hover {
+    transform: scale(1.08); /* Gambar sedikit membesar */
+}
+
+/* Judul Layanan */
+.service-item h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Deskripsi Layanan */
+.service-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card Harga Penawaran */
+.card-harga-penawaran {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    margin-top: 30px;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover pada card harga */
+.card-harga-penawaran:hover {
+    transform: translateY(-8px); /* Angkat card harga saat hover */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.card-harga-penawaran h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-harga-penawaran ul {
+    list-style: none;
+    padding: 0;
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 25px;
+}
+
+.card-harga-penawaran ul li {
+    margin-bottom: 12px;
+    position: relative;
+}
+
+/* Ikon untuk tiap item harga */
+.card-harga-penawaran ul li::before {
+    content: "\2022"; /* Bullet point */
+    position: absolute;
+    left: -15px;
+    top: 0;
+    font-size: 1.5rem;
+    color: #3f80ff;
+}
+
+/* Responsif untuk perangkat dengan layar lebih kecil */
+@media screen and (max-width: 768px) {
+    .service-item {
+        padding: 20px;
+    }
+
+    .service-item h3 {
+        font-size: 1.6rem;
+    }
+
+    .service-item p {
+        font-size: 1rem;
+    }
+
+    .service-img {
+        max-width: 280px;
+    }
+
+    .card-harga-penawaran h4 {
+        font-size: 1.3rem;
+    }
+
+    .card-harga-penawaran ul li {
+        font-size: 1.1rem;
+    }
+}
+
+/* Bagian Title dengan Emoji */
+.section-title {
+    font-size: 3rem; /* Ukuran font yang besar */
+    font-weight: 700; /* Tebal dan berani */
+    color: #3f80ff; /* Warna biru cerah */
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Arial', sans-serif; /* Pilihan font modern */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Jarak antara teks dan emote */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek hover pada title */
+.section-title:hover {
+    color: #ff6f61; /* Warna berubah menjadi oranye saat hover */
+    transform: scale(1.05); /* Membesar sedikit saat hover */
+    text-shadow: 2px 2px 15px rgba(255, 111, 97, 0.7); /* Efek bayangan oranye */
+}
+
+/* Garis bawah animasi */
+.section-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px; /* Garis berada di bawah title */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 5px;
+    background-color: #ff6f61; /* Warna garis oranye */
+    border-radius: 10px;
+    animation: moveLine 0.6s ease-in-out infinite alternate;
+}
+
+/* Animasi garis bawah */
+@keyframes moveLine {
+    0% {
+        transform: translateX(-50%) scaleX(1);
+    }
+    100% {
+        transform: translateX(-50%) scaleX(1.5); /* Membesar garis */
+    }
+}
+
+/* Menambahkan gambar emote */
+.section-title::before {
+    content: "";
+    display: inline-block;
+    width: 40px; /* Ukuran emoji */
+    height: 40px;
+    background-size: cover;
+    margin-right: 10px;
+}

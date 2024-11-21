@@ -1,0 +1,428 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Background warna terang */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header Styles */
+.header {
+    background: #00bcd4; /* Warna biru muda cerah */
+    color: white;
+    padding: 1rem 0;
+}
+
+.header .logo {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.header .nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header .nav ul li {
+    margin-left: 20px;
+}
+
+.header .nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.header .nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero .container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-text {
+    max-width: 700px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #ff7f50;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #ff6347;
+    transform: translateY(-5px);
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        height: 300px;
+    }
+    .hero h2 {
+        font-size: 2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .hero .btn {
+        font-size: 1rem;
+        padding: 0.6rem 1.5rem;
+    }
+}
+
+/* Card Layanan Section */
+.Card-layanan {
+    padding: 50px 0;
+    background-color: #e3f2fd; /* Biru muda untuk latar belakang */
+}
+
+.Card-layanan .container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #ff7f50;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.card .btn {
+    display: inline-block;
+    background-color: #ff7f50;
+    color: white;
+    padding: 0.8rem 2rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.card .btn:hover {
+    background-color: #ff6347;
+}
+
+/* Bagian Mengapa Memilih Kami */
+.mengapa-pilih-kami {
+    padding: 60px 0;
+    background-color: #f4f9fc; /* Warna biru muda terang untuk kesan bersih dan segar */
+}
+
+/* Styling untuk deskripsi di bagian Mengapa Memilih Kami */
+.section-description {
+    font-size: 1.3rem;
+    color: #555; /* Warna teks yang lembut dan nyaman dibaca */
+    line-height: 1.8;
+    margin-bottom: 40px; /* Memberikan ruang lebih bawah teks */
+    text-align: center;
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
+.section-description:hover {
+    color: #ff7f50; /* Warna berubah saat hover untuk efek interaktif */
+    transition: color 0.3s ease;
+}
+
+/* Responsif untuk perangkat dengan layar lebih kecil */
+@media screen and (max-width: 768px) {
+    .section-description {
+        font-size: 1.1rem; /* Menurunkan ukuran font pada perangkat kecil */
+        margin-bottom: 25px;
+    }
+}
+
+/* Styling untuk container bagian Mengapa Memilih Kami */
+.mengapa-pilih-kami .container {
+    display: flex;
+    justify-content: space-around; /* Mengatur jarak antar elemen agar lebih rapi */
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-bottom: 40px; /* Memberikan jarak di bawah container */
+}
+
+/* Styling untuk setiap feature */
+.feature {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px); /* Efek sedikit terangkat saat hover */
+}
+
+/* Styling gambar dalam setiap feature */
+.feature-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Styling judul dan teks dalam setiap feature */
+.feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+.feature p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsif untuk perangkat dengan layar lebih kecil */
+@media screen and (max-width: 768px) {
+    .feature {
+        flex: 1 1 100%; /* Membuat feature menjadi full-width pada perangkat kecil */
+        max-width: 100%;
+    }
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #00bcd4; /* Warna biru muda cerah */
+}
+
+.feature {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    flex: 1 1 calc(50% - 30px);
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+}
+
+.feature-img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.feature h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.feature p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+    .mengapa-pilih-kami .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi fade-out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+/* CSS untuk Section */
+.Pesan-Pesan {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('/images/pexels-pixabay-57416.jpg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.Pesan-Pesan .overlay {
+    background: rgba(0, 0, 0, 0.5); /* Warna overlay dengan transparansi */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Pesan-Pesan .message {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animasi fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animasi fade-out */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}
+
+/* Kelas aktif untuk animasi fade-in */
+.Pesan-Pesan.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+/* Kelas untuk animasi fade-out */
+.Pesan-Pesan.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
