@@ -204,3 +204,38 @@
     background-size: cover;
     margin-right: 10px;
 }
+
+/* CSS untuk Tombol Selengkapnya */
+.btn-selengkapnya {
+    background-color: #007bff; /* Warna latar tombol */
+    color: #fff; /* Warna teks tombol */
+    border: none; /* Menghilangkan border */
+    padding: 10px 20px; /* Padding vertikal dan horizontal */
+    border-radius: 5px; /* Memberikan radius sudut */
+    cursor: pointer; /* Pointer saat di-hover atau diklik */
+    transition: background-color 0.3s ease-in-out; /* Animasi perubahan warna */
+}
+
+.btn-selengkapnya:hover {
+    background-color: #0056b3; /* Warna latar tombol saat di-hover */
+}
+
+.additional-description {
+    display: none;
+    background-color: #f9f9f9; /* Warna latar belakang tambahan */
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.additional-description p {
+    margin: 0; /* Menghilangkan spacing tambahan */
+}
+
+.card-harga-penawaran {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}

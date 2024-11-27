@@ -425,4 +425,29 @@ body {
 .Pesan-Pesan.fade-out {
     animation: fadeOut 0.5s forwards;
 }
+.btn-logout {
+    background-color: #ff4b5c; /* Warna merah */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.btn-logout:hover {
+    background-color: #d03e50; /* Warna merah lebih gelap saat hover */
+}
+.alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+
 

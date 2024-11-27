@@ -1,0 +1,297 @@
+/* Container Reservasi */
+.container-reservasi {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    background-color: #FFF3E0; /* Warna dasar cerah (kuning muda) */
+    border-radius: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(135deg, #FFEB3B, #FF9800); /* Gradien kuning ke oranye */
+}
+
+.reservasi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.gambar-hewan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.gambar-hewan-img {
+    width: 100%;
+    max-width: 480px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    transform: scale(1);
+    transition: transform 0.5s ease-in-out;
+}
+
+.gambar-hewan-img:hover {
+    transform: scale(1.1);
+}
+
+.form-reservasi-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.form-reservasi {
+    width: 100%;
+    max-width: 600px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: #fff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+    margin: 0 auto;
+    box-sizing: border-box; /* Memastikan padding tidak melebihi lebar */
+}
+
+.form-reservasi:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+input[type="text"], input[type="number"], select, textarea {
+    width: 100%;
+    max-width: 100%;  /* Memastikan input tidak melampaui lebar form */
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    background-color: #FFFBF1;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    color: #333;
+    box-sizing: border-box; /* Memastikan padding tidak menambah lebar */
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #FF9800;
+    background-color: #FFF8E1;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-submit {
+    background-color: #FF9800;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.btn-submit:hover {
+    background-color: #FB8C00;
+    transform: scale(1.05);
+}
+
+.btn-submit:active {
+    background-color: #F57C00;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+    .reservasi-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .gambar-hewan-img {
+        max-width: 100%;
+    }
+
+    .form-reservasi {
+        width: 100%;
+        padding: 25px;
+    }
+}
+
+/* Card Harga dan Penawaran */
+.card-harga-dan-penawaran {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #FFF3E0;
+    position: relative;
+}
+
+.card-harga-dan-penawaran h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    padding: 40px;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+    font-size: 28px;
+    font-weight: 700;
+    color: #FF9800; /* Warna oranye pada header */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.card-body {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.card-body .price {
+    font-size: 32px;
+    font-weight: 800;
+    color: #FF5722;
+    margin-bottom: 15px;
+}
+
+.card-body ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card-body ul li {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.card-footer {
+    text-align: center;
+}
+
+.btn-penawaran {
+    background-color: #FF9800;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 12px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-penawaran:hover {
+    background-color: #FB8C00;
+    transform: scale(1.05);
+}
+
+.btn-penawaran:active {
+    background-color: #F57C00;
+}
+
+/* Responsif untuk ukuran layar lebih kecil */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: 1fr; /* 1 kolom pada layar kecil */
+        gap: 30px; /* Mengurangi jarak antar card */
+    }
+
+    .card {
+        padding: 30px; /* Mengurangi padding card untuk layar kecil */
+    }
+
+    .card-header {
+        font-size: 24px; /* Menyesuaikan ukuran font header pada layar kecil */
+    }
+
+    .card-body .price {
+        font-size: 28px; /* Menyesuaikan ukuran font harga pada layar kecil */
+    }
+
+    .card-body ul li {
+        font-size: 16px; /* Menyesuaikan ukuran font list item pada layar kecil */
+    }
+}
+.alert-success {
+    background-color: #4caf50;
+    color: white;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.alert-success:hover {
+    background-color: #45a049;
+}
+
+.alert-success a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.alert-success .close {
+    color: white;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.alert-success .close:hover {
+    opacity: 1;
+}

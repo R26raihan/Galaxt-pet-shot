@@ -6,9 +6,8 @@ use Illuminate\Http\Request;
 
 class ServiceController extends Controller
 {
-    public function showService()
+    public function index()
     {
-        // Mengembalikan view 'service'
-        return view('service');
+        return view('service'); // Pastikan file `service.blade.php` ada di folder `resources/views`
     }
 }

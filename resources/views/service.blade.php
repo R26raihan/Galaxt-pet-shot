@@ -16,9 +16,7 @@
                 <ul>
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('service') }}">Service</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Register</a></li>
+                    <li><a href="{{ route('login.form') }}">Login</a></li>
                 </ul>
             </nav>
         </div>
@@ -43,13 +41,9 @@
                 <img src="{{ asset('images/penitipan.png') }}" alt="Penitipan Hewan" class="service-img">
                 <h3>Penitipan Hewan</h3>
                 <p>Biarkan kami menjaga dan merawat hewan kesayangan Anda dengan penuh perhatian. Layanan penitipan kami memberikan kenyamanan dan rasa aman bagi hewan peliharaan Anda. Dengan fasilitas yang bersih dan aman, kami akan memastikan hewan kesayangan Anda tetap bahagia meskipun Anda sedang tidak bersamanya.</p>
-                <div class="card-harga-penawaran">
-                    <h4>Penawaran Harga</h4>
-                    <ul>
-                        <li>Harga per hari: Rp 100.000</li>
-                        <li>Paket Mingguan: Rp 500.000</li>
-                        <li>Paket Bulanan: Rp 1.800.000</li>
-                    </ul>
+                <a href="{{ route('reservasi.create') }}" class="btn">Selengkapnya</a>
+                <div id="penitipan" class="additional-description" style="display: none;">
+                    <p>Tambahkan informasi lebih lanjut di sini jika Anda ingin menjelaskan lebih detail mengenai layanan penitipan hewan yang disediakan.</p>
                 </div>
             </div>
 
@@ -57,13 +51,9 @@
                 <img src="{{ asset('images/grooming.png') }}" alt="Grooming Profesional" class="service-img">
                 <h3>Grooming Profesional</h3>
                 <p>Kami menyediakan layanan grooming yang lengkap dan profesional untuk memastikan hewan peliharaan Anda selalu tampil cantik dan sehat. Dari pemotongan kuku, pencucian, hingga perawatan bulu, kami memberikan perhatian khusus untuk membuat hewan kesayangan Anda merasa nyaman dan terlihat terbaik.</p>
-                <div class="card-harga-penawaran">
-                    <h4>Penawaran Harga</h4>
-                    <ul>
-                        <li>Potong Kuku: Rp 50.000</li>
-                        <li>Pencucian + Pemotongan Rambut: Rp 150.000</li>
-                        <li>Paket Lengkap (Potong Kuku, Pencucian, Pemotongan Rambut): Rp 250.000</li>
-                    </ul>
+                <a href="{{ route('reservasi.grooming.create') }}" class="btn">Selengkapnya</a>
+                <div id="grooming" class="additional-description" style="display: none;">
+                    <p>Tambahkan informasi lebih lanjut di sini jika Anda ingin menjelaskan lebih detail mengenai layanan grooming yang disediakan.</p>
                 </div>
             </div>
         </div>
