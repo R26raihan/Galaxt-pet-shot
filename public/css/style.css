@@ -450,87 +450,76 @@ body {
     border-color: #ebccd1;
 }
 /* kitik dan saran============================================================================= */
-
 .Kritik-dan-saran {
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #f8f8f8;
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
-    transition: all 0.3s ease-in-out;
+    background-image: url('https://channelreplys4.s3.amazonaws.com/blog/1650292241-How-to-Create-a-Customer-Feedback-Loop-That-Works_00.jpg');
+    background-size: cover; /* Agar gambar menutupi seluruh section */
+    background-position: center; /* Menjaga gambar agar selalu terpusat */
+    background-repeat: no-repeat; /* Menghindari gambar terulang */
+    color: white; /* Menyesuaikan warna teks dengan latar belakang */
+    padding: 40px;
+    border-radius: 12px;
+    max-width: 1200px; /* Memperlebar section menjadi 1200px */
+    width: 100%; /* Agar section bisa menyesuaikan lebar kontainer */
+    margin: 30px auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .Kritik-dan-saran h2 {
-    text-align: center;
-    color: #333;
-    font-size: 2em;
+    color: white;
+    font-size: 24px;
     margin-bottom: 20px;
+    text-align: center; /* Menyelaraskan judul ke tengah */
 }
 
 .Kritik-dan-saran form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.Kritik-dan-saran label {
-    font-size: 1.1em;
-    color: #444;
-    font-weight: bold;
-}
-
-.Kritik-dan-saran input,
-.Kritik-dan-saran textarea {
-    padding: 12px;
-    font-size: 1em;
-    border: 1px solid #ccc;
+    background: rgba(0, 0, 0, 0.5); /* Menambahkan transparansi untuk form agar lebih terbaca */
+    padding: 30px;
     border-radius: 8px;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    background-color: #fff;
+    max-width: 100%; /* Memastikan form memanfaatkan lebar penuh dari section */
+    margin: 0 auto;
 }
 
-/* Mengatur lebar textarea agar lebih lebar */
-.Kritik-dan-saran textarea {
-    width: 100%; /* Membuat textarea mengambil lebar penuh dari form */
-    min-height: 150px; /* Menentukan tinggi minimal untuk textarea */
+.Kritik-dan-saran form label {
+    display: block;
+    color: white;
+    margin-bottom: 8px;
+    font-size: 16px; /* Menambah ukuran font untuk kenyamanan pembacaan */
 }
 
-.Kritik-dan-saran input:focus,
-.Kritik-dan-saran textarea:focus {
-    border-color: #007BFF;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
+.Kritik-dan-saran form input,
+.Kritik-dan-saran form textarea {
+    width: 100%; /* Memastikan input dan textarea mengisi seluruh lebar */
+    padding: 12px; /* Memperbesar padding agar lebih nyaman */
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px; /* Menambah ukuran font untuk kenyamanan */
 }
 
-.Kritik-dan-saran button {
-    padding: 12px 20px;
-    background-color: #007BFF;
+.Kritik-dan-saran form textarea {
+    min-height: 120px; /* Menambah tinggi textarea */
+}
+
+.Kritik-dan-saran form button {
+    padding: 12px 25px;
+    background-color: #2a9d8f;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.Kritik-dan-saran button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.Kritik-dan-saran button:active {
-    transform: translateY(0);
-}
-
-.Kritik-dan-saran .success-message {
-    color: #28a745;
-    font-size: 1.2em;
-    text-align: center;
-    margin-bottom: 20px;
-    background-color: #d4edda;
-    padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
 }
+
+.Kritik-dan-saran form button:hover {
+    background-color: #21867a;
+}
+
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+

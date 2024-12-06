@@ -18,7 +18,25 @@
                 <ul>
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('service') }}">Service</a></li>
-                    <li><a href="{{ route('login.form') }}">Login</a></li>
+
+                    <!-- Menampilkan Login jika pengguna belum login -->
+                    @if (Auth::check())
+                        <!-- Tombol Logout -->
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="btn-logout">Logout</button>
+                            </form>
+                        </li>
+                    @else
+                        <!-- Menampilkan Login jika pengguna belum login -->
+                        <li><a href="{{ route('login.form') }}">Login</a></li>
+                    @endif
+                    <li>
+                        <a href="{{ route('profile') }}">
+                            <i class="fas fa-user-circle" style="font-size: 30px; color: #4e73df;"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>

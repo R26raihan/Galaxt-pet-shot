@@ -6,6 +6,7 @@
     <title>Pet and Grooming</title>
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('js/inandout.js') }}" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
@@ -30,6 +31,11 @@
                         <!-- Menampilkan Login jika pengguna belum login -->
                         <li><a href="{{ route('login.form') }}">Login</a></li>
                     @endif
+                    <li>
+                        <a href="{{ route('profile') }}">
+                            <i class="fas fa-user-circle" style="font-size: 30px; color: #4e73df;"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -93,6 +99,75 @@
         </div>
     </section>
 
+    <section class="produk">
+        <div class="produk-container">
+            <div class="produk-text">
+                <h1>Produk Kesehatan & Perawatan</h1>
+                <p>
+                    Kami akan memberikan solusi dan rekomendasi produk yang tepat dan berkualitas
+                    sehingga membuat hewan peliharaan Anda lebih sehat dan terawat. Produk-produk yang kami
+                    rekomendasikan akan disesuaikan dengan kebutuhan hewan peliharaan Anda. Konsultasikan
+                    kebutuhan dan masalah Anda kepada kami dan dapatkan solusi yang tepat untuk kebutuhan
+                    hewan kesayangan Anda.
+                </p>
+            </div>
+            <div class="produk-image">
+                <img src="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Produk Kesehatan & Perawatan">
+            </div>
+        </div>
+    </section>
+
+    <style>
+        .produk {
+    padding: 40px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 1200px; /* Memperlebar section */
+    display: flex;
+    justify-content: center;
+}
+
+.produk-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi layout menjadi dua kolom */
+    gap: 30px; /* Memberi jarak antara kolom */
+    align-items: center;
+    width: 100%;
+}
+
+.produk-text {
+    max-width: 600px;
+}
+
+.produk-text h1 {
+    font-size: 32px;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.produk-text p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6; /* Menambahkan jarak antar baris */
+}
+
+.produk-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .produk-container {
+        grid-template-columns: 1fr; /* Mengubah grid menjadi satu kolom pada layar kecil */
+    }
+}
+
+    </style>
+
     <section class="Kritik-dan-saran">
         <h2>Kritik dan Saran</h2>
         @if(session('success'))
@@ -113,6 +188,7 @@
             <button type="submit">Kirim</button>
         </form>
     </section>
+
 
 
 

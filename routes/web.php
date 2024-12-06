@@ -137,3 +137,9 @@ Route::get('jenis-layanan/create', [AdminDashboardController::class, 'create'])-
 Route::post('jenis-layanan', [AdminDashboardController::class, 'store'])->name('jenis-layanan.store');
 Route::put('jenis-layanan/{id}', [AdminDashboardController::class, 'updateJenisLayananGrooming'])->name('jenis-layanan.update');
 Route::get('jenis-layanan/{id}/edit', [AdminDashboardController::class, 'editJenisLayananGrooming'])->name('jenis-layanan.edit');
+
+
+use App\Http\Controllers\ProfileController;
+
+Route::get('/profile', [ProfileController::class, 'index'])->name('profile');
+

@@ -18,7 +18,25 @@
                 <ul>
                     <li><a href="{{ route('home') }}">Home</a></li>
                     <li><a href="{{ route('service') }}">Service</a></li>
-                    <li><a href="{{ route('login.form') }}">Login</a></li>
+
+                    <!-- Menampilkan Login jika pengguna belum login -->
+                    @if (Auth::check())
+                        <!-- Tombol Logout -->
+                        <li>
+                            <form action="{{ route('logout') }}" method="POST" style="display:inline;">
+                                @csrf
+                                <button type="submit" class="btn-logout">Logout</button>
+                            </form>
+                        </li>
+                    @else
+                        <!-- Menampilkan Login jika pengguna belum login -->
+                        <li><a href="{{ route('login.form') }}">Login</a></li>
+                    @endif
+                    <li>
+                        <a href="{{ route('profile') }}">
+                            <i class="fas fa-user-circle" style="font-size: 30px; color: #4e73df;"></i>
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -35,7 +53,7 @@
 
     <style>
     .syarat-penitipan {
-        background: linear-gradient(135deg, #f9f9f9, #e6e6e6);
+        background-image: url('https://i.pinimg.com/736x/ef/b4/a3/efb4a3f247f47954d30a3758ada644c6.jpg');
         border: 1px solid #ccc;
         border-radius: 12px;
         padding: 25px;
@@ -167,55 +185,78 @@
 @endif
 
 <section class="fasilitas-penitipan-hewan">
-    <img src="https://assets.petpintar.com/cache/720/540/article/741/1660973975-tempat-penitipan-kucing-surabaya-banner.jpg"
-         alt="Ilustrasi Kucing">
-    <h2>Fasilitas Penitipan Hewan</h2>
-    <p>Kami menyediakan berbagai fasilitas terbaik untuk kenyamanan hewan peliharaan Anda:</p>
-    <ul>
-        <li>Ruang tidur yang nyaman dan bersih.</li>
-        <li>Makanan sehat sesuai kebutuhan hewan.</li>
-        <li>Perawatan medis oleh tenaga profesional.</li>
-        <li>Area bermain yang aman dan luas.</li>
-        <li>Pemantauan CCTV selama 24 jam.</li>
-    </ul>
+    <div class="fasilitas-grid">
+        <div class="fasilitas-image">
+            <img src="https://assets.petpintar.com/cache/720/540/article/741/1660973975-tempat-penitipan-kucing-surabaya-banner.jpg"
+                 alt="Ilustrasi Kucing">
+        </div>
+        <div class="fasilitas-text">
+            <h2>Fasilitas Penitipan Hewan</h2>
+            <p>Kami menyediakan berbagai fasilitas terbaik untuk kenyamanan hewan peliharaan Anda:</p>
+            <ul>
+                <li>Ruang tidur yang nyaman dan bersih.</li>
+                <li>Makanan sehat sesuai kebutuhan hewan.</li>
+                <li>Perawatan medis oleh tenaga profesional.</li>
+                <li>Area bermain yang aman dan luas.</li>
+                <li>Pemantauan CCTV selama 24 jam.</li>
+            </ul>
+        </div>
+    </div>
 </section>
+
 <style>
 .fasilitas-penitipan-hewan {
-    background-color: #ffffff;
+    background-image: url('https://i.pinimg.com/736x/ef/b4/a3/efb4a3f247f47954d30a3758ada644c6.jpg');
     border-radius: 12px;
     padding: 20px;
     max-width: 900px; /* Diperlebar menjadi 900px */
     margin: 30px auto;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-.fasilitas-penitipan-hewan h2 {
+/* Layout Grid */
+.fasilitas-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Gambar di kiri dan teks di kanan */
+    gap: 20px;
+    align-items: center; /* Memastikan gambar dan teks sejajar secara vertikal */
+}
+
+/* Gambar */
+.fasilitas-image img {
+    width: 100%;
+    max-width: 400px; /* Disesuaikan untuk proporsi yang lebih lebar */
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Teks */
+.fasilitas-text h2 {
     color: #2a9d8f;
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.fasilitas-penitipan-hewan p {
+.fasilitas-text p {
     font-size: 16px;
     margin-bottom: 20px;
 }
 
-.fasilitas-penitipan-hewan ul {
+.fasilitas-text ul {
     list-style-type: none;
     padding: 0;
     text-align: left;
     margin-bottom: 20px;
 }
 
-.fasilitas-penitipan-hewan ul li {
+.fasilitas-text ul li {
     font-size: 16px;
     margin-bottom: 10px;
     padding-left: 20px;
     position: relative;
 }
 
-.fasilitas-penitipan-hewan ul li:before {
+.fasilitas-text ul li:before {
     content: "✔";
     color: #2a9d8f;
     font-weight: bold;
@@ -224,13 +265,17 @@
     top: 0;
 }
 
-.fasilitas-penitipan-hewan img {
-    width: 100%;
-    max-width: 400px; /* Disesuaikan untuk proporsi yang lebih lebar */
-    height: auto;
-    border-radius: 12px;
-    margin-top: 15px;
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .fasilitas-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk gambar dan teks pada layar kecil */
+    }
+
+    .fasilitas-image img {
+        max-width: 100%; /* Mengoptimalkan gambar untuk layar kecil */
+    }
 }
+
 </style>
 
 
