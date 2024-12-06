@@ -239,6 +239,34 @@
         </div>
     </div>
 
+    <!-- Card for Kritik dan Saran -->
+<div class="card mt-4">
+    <div class="card-header">
+        Data Kritik dan Saran
+    </div>
+    <div class="card-body table-container">
+        <table class="table table-bordered table-striped" id="kritikSaranTable">
+            <thead>
+                <tr>
+                    <th>Nama Pengguna</th>
+                    <th>Email</th>
+                    <th>Pesan</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($kritikDanSaran as $item)
+                <tr class="kritik-saran-data" data-name="{{ $item->nama_pengguna }}" data-message="{{ $item->pesan }}">
+                    <td>{{ $item->nama_pengguna }}</td>
+                    <td>{{ $item->email }}</td>
+                    <td>{{ $item->pesan }}</td>
+                </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
 
 
 

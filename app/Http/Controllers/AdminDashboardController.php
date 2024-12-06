@@ -9,6 +9,7 @@ use App\Models\reservasigrooming;
 use App\Models\reservasipenitipan;
 use Illuminate\Http\Request;
 use App\Models\JenisLayananGrooming;
+use App\Models\kritikdansaran;
 
 class AdminDashboardController extends Controller
 {
@@ -20,17 +21,18 @@ class AdminDashboardController extends Controller
         $pelanggan = Pelanggan::all();
         $reservasigrooming = ReservasiGrooming::all();
         $reservasipenitipan = ReservasiPenitipan::all();
-
         $jenisLayananGrooming = JenisLayananGrooming::all();  // Mengambil seluruh data layanan grooming
+        $kritikDanSaran = KritikDanSaran::all();  // Ambil semua data kritik dan saran
 
         // Kirimkan semua data ke view admin
-        return view('admin', compact(
+        return view('karyawan', compact(
             'hargagrooming',
             'hargapenitipan',
             'pelanggan',
             'reservasigrooming',
             'reservasipenitipan',
-            'jenisLayananGrooming' // Pastikan variabel ini dikirim ke view
+            'jenisLayananGrooming',
+            'kritikDanSaran'  // Kirimkan data kritik dan saran ke view
         ));
     }
 

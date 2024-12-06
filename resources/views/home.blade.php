@@ -93,6 +93,29 @@
         </div>
     </section>
 
+    <section class="Kritik-dan-saran">
+        <h2>Kritik dan Saran</h2>
+        @if(session('success'))
+        <div class="success-message">{{ session('success') }}</div>
+        @endif
+
+        <form action="{{ route('storeKritikDanSaran') }}" method="POST">
+            @csrf
+            <label for="nama_pengguna">Nama:</label>
+            <input type="text" id="nama_pengguna" name="nama_pengguna" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan" name="pesan" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const pesanPesan = document.querySelector(".Pesan-Pesan");

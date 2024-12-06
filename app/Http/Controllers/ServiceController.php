@@ -8,6 +8,7 @@ class ServiceController extends Controller
 {
     public function index()
     {
-        return view('service'); // Pastikan file `service.blade.php` ada di folder `resources/views`
+        return view('service');
     }
+
 }

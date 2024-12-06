@@ -25,6 +25,7 @@ class ReservasiController extends Controller
             'nama_hewan' => 'required|string|max:100',
             'lama_hari' => 'required|integer|min:1',
             'paket' => 'required|string|max:50',
+            'penyakit' => 'nullable|string|max:255',  // Validasi untuk penyakit hewan
         ]);
 
         // Menyimpan data reservasi ke database
@@ -36,6 +37,7 @@ class ReservasiController extends Controller
             'nama_hewan' => $request->nama_hewan,
             'lama_hari' => $request->lama_hari,
             'paket' => $request->paket,
+            'penyakit' => $request->penyakit,  // Menyimpan penyakit hewan
         ]);
 
         // Redirect ke halaman sukses atau halaman lain setelah menyimpan
@@ -64,6 +66,7 @@ class ReservasiController extends Controller
             'nama_hewan' => 'required|string|max:100',
             'lama_hari' => 'required|integer|min:1',
             'paket' => 'required|string|max:50',
+            'penyakit' => 'nullable|string|max:255',  // Validasi untuk penyakit hewan
         ]);
 
         // Menemukan reservasi penitipan yang akan diperbarui
@@ -78,6 +81,7 @@ class ReservasiController extends Controller
             'nama_hewan' => $request->nama_hewan,
             'lama_hari' => $request->lama_hari,
             'paket' => $request->paket,
+            'penyakit' => $request->penyakit,  // Memperbarui penyakit hewan
         ]);
 
         // Redirect setelah berhasil memperbarui

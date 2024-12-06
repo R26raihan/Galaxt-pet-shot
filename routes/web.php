@@ -9,12 +9,13 @@ use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\HargaGroomingController;
 use App\Http\Controllers\HargaPenitipanController;
 use App\Http\Controllers\AdminReservasiGroomingController;
+use App\Http\Controllers\HomeController;
 
 
-// Rute Home
-Route::get('/', function () {
-    return view('home'); // Halaman home
-})->name('home');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/kritik-dan-saran', [HomeController::class, 'storeKritikDanSaran'])->name('storeKritikDanSaran');
+
 
 Route::get('/register', [AuthController::class, 'showRegisterForm'])->name('register.form');
 Route::post('/register', [AuthController::class, 'register'])->name('register.submit');
@@ -33,9 +34,10 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Rute untuk menampilkan daftar pengguna
 Route::get('/user', [UserController::class, 'showUsers'])->name('users');
+Route::get('/service', [ServiceController::class, 'index'])
+    ->middleware('auth')
+    ->name('service');
 
-// Rute Service (tanpa middleware 'auth')
-Route::get('/service', [ServiceController::class, 'index'])->name('service'); // Halaman service
 
 
 

@@ -25,6 +25,7 @@ class reservasipenitipan extends Model
         'nama_hewan',
         'lama_hari',
         'paket',
+        'penyakit',
     ];
 
     /**

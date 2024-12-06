@@ -27,6 +27,74 @@
 
 
 
+    <section class="fasilitas-grooming-hewan">
+        <h2>Fasilitas Grooming Hewan</h2>
+        <p>Kami menyediakan fasilitas grooming lengkap untuk menjaga kebersihan dan kesehatan hewan peliharaan Anda:</p>
+        <ul>
+            <li>Mandi Dengan Shampo Khusus.</li>
+            <li>Pemotongan kuku.</li>
+            <li>Pembersihan Telinga.</li>
+            <li>Penyisiran dan perapihan bulu.</li>
+            <li>Pengeringan dengan Teknik yang aman dan nyaman.</li>
+            <li>Pemeriksaan kondisi kulit untuk mendeteksi masalah seperti iritasi atau alargi.</li>
+        </ul>
+    </section>
+
+    <style>
+        .fasilitas-grooming-hewan {
+    background-color: #f3f4f6;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 900px;
+    margin: 30px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.fasilitas-grooming-hewan h2 {
+    color: #ff6f61; /* Warna merah pastel */
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.fasilitas-grooming-hewan p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #555; /* Warna teks abu-abu */
+}
+
+.fasilitas-grooming-hewan ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.fasilitas-grooming-hewan ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.fasilitas-grooming-hewan ul li:before {
+    content: "✔";
+    color: #ff6f61; /* Warna ikon sesuai heading */
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fasilitas-grooming-hewan img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    margin-top: 15px;
+}
+
+    </style>
 
 
 
